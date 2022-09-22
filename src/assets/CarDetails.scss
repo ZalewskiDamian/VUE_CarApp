@@ -1,0 +1,305 @@
+.details {
+    margin: 20px 0;
+
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 20px;
+
+        @media (min-width: 992px) {
+            grid-template-columns: 60% 40%;
+        }
+    }
+    &__gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        @media (min-width: 992px) {
+            padding-right: 50px;
+        }
+    }
+    &__heading {
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+    &__price {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        color: #939393;
+    }
+    &__description {
+        text-align: left;
+    }
+    &__location {
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        grid-gap: 10px;
+    }
+    &__list {
+        padding: 10px 0;
+    }
+    &__listItem {
+        display: grid;
+        grid-template-columns: 24px 1fr 1fr;
+        grid-gap: 20px;
+        align-items: center;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #e5d6b3;
+        }
+    }
+    &__paragraph {
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+    &__rating {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__ratingResult {
+        font-weight: 500;
+        margin-left: 10px;
+    }
+    &__moreInfo {
+        padding-right: 60px;
+    }
+    &__features {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            left: -40px;
+            height: 90%;
+            width: 1px;
+            background-color: #e5d6b3;
+        }
+    }
+    &__featuresList {
+        margin: 10px 0;
+    }
+    &__featuresListItem {
+        margin-bottom: 5px;
+        padding-left: 25px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            background-image: url('../assets/images/check-mark-icon.png');
+            background-size: 100% 100%;
+        }
+    }
+    &__author {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            left: -40px;
+            height: 90%;
+            width: 1px;
+            background-color: #e5d6b3;
+        }
+
+        &Row {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+        &Avatar {
+            max-width: 128px;
+        }
+        &TextWrapper {
+            padding-left: 20px;
+        }
+        &Nick {
+            display: block;
+            font-size: 22px;
+            font-weight: 600;
+            color: black;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+        &Text {
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// CAROUSEL GALLERY
+.carousel {
+    max-width: 100%;
+
+    &__img {
+        width: 100%;
+    }
+}
+
+.carousel__item {
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel__prev,
+.carousel__next {
+    box-sizing: content-box;
+    border: 5px solid white;
+    background-color: #8D3131;
+    transition: all .35s ease-in-out;
+
+    &:hover {
+        border: 5px solid #8D3131;
+    }
+}
+
+.carousel__prev {
+    left: 20px;
+}
+.carousel__next {
+    right: 20px;
+}
+
+// STAR RATING
+.vue3-star-ratings__wrapper[data-v-76dea496] {
+    margin: 0;
+    padding: 8px 0;
+
+    button {
+        display: none;
+    }
+    .stars svg[data-v-76dea496] {
+        margin: 0 3px;
+    }
+}
+
+// COMMENTS
+.comments {
+    margin: 10px 0;
+    padding-right: 60px;
+
+    &__addWrapper {
+        border-radius: 8px;
+        border: 1px solid #8d3131;
+        background-color: #f6edd8;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    &__textarea {
+        width: 100%;
+        outline: none;
+        font-family: 'Montserrat', sans-serif;
+        resize: none;
+        height: 100px;
+        border: none;
+        background-color: #f6edd8;
+    }
+    &__buttonGroup {
+        border-top: 1px solid #ffc3c3;
+        padding-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__button {
+        background-color: #8D3131;
+        border-radius: 8px;
+        border: 0;
+        padding: 10px 20px;
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all .35s ease-in-out;
+
+        &:hover {
+            background-color: #bf5151;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__comment {
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        position: relative;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #ffc3c3;
+        }
+
+        &Header {
+            display: grid;
+            grid-template-columns: 32px 1fr;
+            grid-gap: 15px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        &Name {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        &Bottom {
+            margin-top: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        &ReplyIcon {
+            max-width: 16px;
+            margin-right: 5px;
+            margin-bottom: 3px;
+        }
+        &ReplyButton {
+            color: black;
+            font-weight: 600;
+            display: block;
+            margin-right: 10px;
+        }
+        &Date {
+            font-size: 14px;
+            color: gray;
+            font-weight: 500;
+        }
+    }
+    &__comment.reply {
+        padding-left: 50px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            transform: rotate(180deg);
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background-image: url(../assets/images/comment-reply-icon.png);
+            background-size: 100% 100%;
+        }
+    }
+}
